@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Bunkong.WorkLogs
+namespace Bunkong.WorkLogs.APIs
 {
     public class Program
     {
