@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Bunkong.WorkLogs.DAL
+namespace Bunkong.WorkLogs.Independences
 {
     public class Class1
     {
