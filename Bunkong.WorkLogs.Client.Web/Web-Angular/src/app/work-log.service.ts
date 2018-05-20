@@ -9,7 +9,9 @@ import { WorkLog } from './workLog';
 import { MessageService } from './message.service';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
 };
 
 @Injectable({
@@ -24,7 +26,8 @@ export class WorkLogService {
 
   /** GET worklogs from the server */
   getWorkLogs (): Observable<WorkLog[]> {
-    return this.http.get<WorkLog[]>(this.workLogUrl)
+    console.log(this.workLogUrl);
+    return this.http.get<WorkLog[]>(this.workLogUrl, httpOptions)
       .pipe(
         tap(heroes => this.log(`fetched worklogs`)),
         catchError(this.handleError('getWorkLogs', []))
@@ -37,9 +40,9 @@ export class WorkLogService {
    * @param operation - name of the operation that failed
    * @param result - optional value to return as the observable result
    */
-  private handleError<T> (operation = 'operation', result?: T) {
+  private handleError<T> (operation = 'operation', result?: T) { 
     return (error: any): Observable<T> => {
-
+      console.log(error);
       // TODO: send the error to remote logging infrastructure
       console.error(error); // log to console instead
 
@@ -51,8 +54,8 @@ export class WorkLogService {
     };
   }
 
-  /** Log a HeroService message with the MessageService */
+  /** Log a   message with the MessageService */
   private log(message: string) {
-    this.messageService.add('HeroService: ' + message);
+    this.messageService.add('WorkLogService: ' + message);
   }
 }

@@ -1,3 +1,18 @@
-<p>
-  work-logs works!
-</p>
+<table>
+  <thead>
+    <th>序号</th>
+    <th>工作日期</th>
+    <th>工作时长</th>
+    <th>工作内容</th>
+    <th>备注</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let workLog of workLogs;let index = index;">
+      <td>{{index}}</td>
+      <td>{{workLog.WorkDate}}</td>
+      <td>{{workLog.WorkHoures}}</td>
+      <td>{{workLog.WorkContent}}</td>
+      <td>{{workLog.Remark}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -42,6 +42,8 @@ namespace Bunkong.WorkLogs.APIs
 
             services.AddDbContext<Bunkong.WorkLogs.DAL.InjectDependencyBunkongDbContext>(options =>
                 options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Bunkong.WorkLogs;Trusted_Connection=True;ConnectRetryCount=0"));
+
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,6 +68,15 @@ namespace Bunkong.WorkLogs.APIs
             });
 
             app.UseMvc();
+
+            //设置跨域
+            app.UseCors(builder =>
+            {
+                builder.AllowAnyHeader();
+                builder.AllowAnyMethod();
+                builder.AllowAnyOrigin(); //允许任何域
+                //builder.WithOrigins("http://localhost:8080");
+            });
         }
     }
 }

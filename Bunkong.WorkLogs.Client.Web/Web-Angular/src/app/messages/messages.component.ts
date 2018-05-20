@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-messages',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessagesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public messageService: MessageService) { }
 
   ngOnInit() {
   }
 
 }
+
+// import { Component, OnInit } from '@angular/core';
+
+// @Component({
+//   selector: 'app-not-include-test',
+//   templateUrl: './not-include-test.component.html',
+//   styleUrls: ['./not-include-test.component.css']
+// })
+// export class MessagesComponent implements OnInit {
+
+//   constructor() { }
+
+//   ngOnInit() {
+//   }
+
+// }
+
