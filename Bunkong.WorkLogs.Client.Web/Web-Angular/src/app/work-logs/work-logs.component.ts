@@ -19,7 +19,7 @@ export class WorkLogsComponent implements OnInit {
 
   getWorkLogs(): void {
     this.workLogService.getWorkLogs()
-    .subscribe(worklogs => this.workLogs = this.workLogs);
+    .subscribe(worklogs => this.workLogs = worklogs);
   }
 
 }

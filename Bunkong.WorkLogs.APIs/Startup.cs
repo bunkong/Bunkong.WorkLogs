@@ -43,7 +43,7 @@ namespace Bunkong.WorkLogs.APIs
             services.AddDbContext<Bunkong.WorkLogs.DAL.InjectDependencyBunkongDbContext>(options =>
                 options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Bunkong.WorkLogs;Trusted_Connection=True;ConnectRetryCount=0"));
 
-            services.AddCors();
+           // services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,12 +64,10 @@ namespace Bunkong.WorkLogs.APIs
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
 
                 //To serve the Swagger UI at the app's root (http://localhost:<port>/), set the RoutePrefix property to an empty string:
-                c.RoutePrefix = string.Empty;
+                //c.RoutePrefix = string.Empty;
             });
 
-            app.UseMvc();
-
-            //设置跨域
+            //设置跨域 : 必须位于mvc 之前
             app.UseCors(builder =>
             {
                 builder.AllowAnyHeader();
@@ -77,6 +75,10 @@ namespace Bunkong.WorkLogs.APIs
                 builder.AllowAnyOrigin(); //允许任何域
                 //builder.WithOrigins("http://localhost:8080");
             });
+
+            app.UseMvc();
+
+           
         }
     }
 }

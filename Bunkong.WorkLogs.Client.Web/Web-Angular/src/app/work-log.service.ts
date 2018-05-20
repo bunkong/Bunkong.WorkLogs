@@ -26,7 +26,6 @@ export class WorkLogService {
 
   /** GET worklogs from the server */
   getWorkLogs (): Observable<WorkLog[]> {
-    console.log(this.workLogUrl);
     return this.http.get<WorkLog[]>(this.workLogUrl, httpOptions)
       .pipe(
         tap(heroes => this.log(`fetched worklogs`)),
@@ -40,7 +39,7 @@ export class WorkLogService {
    * @param operation - name of the operation that failed
    * @param result - optional value to return as the observable result
    */
-  private handleError<T> (operation = 'operation', result?: T) { 
+  private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.log(error);
       // TODO: send the error to remote logging infrastructure
