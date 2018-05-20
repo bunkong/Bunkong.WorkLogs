@@ -11,9 +11,10 @@ using System;
 namespace Bunkong.WorkLogs.DAL.Migrations
 {
     [DbContext(typeof(BunKongDbContext))]
-    partial class BunKongDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180520024229_add-test-db-migration")]
+    partial class addtestdbmigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

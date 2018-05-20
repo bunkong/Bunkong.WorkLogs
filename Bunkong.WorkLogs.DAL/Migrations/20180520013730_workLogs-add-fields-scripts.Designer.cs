@@ -11,24 +11,15 @@ using System;
 namespace Bunkong.WorkLogs.DAL.Migrations
 {
     [DbContext(typeof(BunKongDbContext))]
-    partial class BunKongDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180520013730_workLogs-add-fields-scripts")]
+    partial class workLogsaddfieldsscripts
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.0.2-rtm-10011")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("Bunkong.WorkLogs.DAL.TestTwoDbContextMigrateTable", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TestTwoDbContextMigrateTable");
-                });
 
             modelBuilder.Entity("Bunkong.WorkLogs.DAL.WorkLog", b =>
                 {

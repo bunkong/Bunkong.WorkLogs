@@ -15,6 +15,8 @@ namespace Bunkong.WorkLogs.DAL
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Bunkong.WorkLogs;Trusted_Connection=True;ConnectRetryCount=0");
         }
 
-        public DbSet<WorkLog> WorkLogs { get; set; }
+        public DbSet<WorkLog> WorkLogs { get; set; } 
+
+        public DbSet<TestTwoDbContextMigrateTable> TestTwoDbContextMigrateTable { get; set; }
     }
 }

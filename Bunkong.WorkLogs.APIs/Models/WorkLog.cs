@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Bunkong.WorkLogs.DAL
+namespace Bunkong.WorkLogs.APIs.Models
 {
     public class WorkLog
     {
-        [Key]
         public Guid Id { get; set; }
 
         public double WorkHoures { get; set; }
