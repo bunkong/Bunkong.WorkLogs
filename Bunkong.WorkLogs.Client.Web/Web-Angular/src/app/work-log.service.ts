@@ -18,7 +18,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class WorkLogService {
-  private workLogUrl = 'http://localhost:55019/api/worklogs';  // URL to web api
+  private workLogUrl = 'http://localhost:51092/api/worklogs';  // URL to web api
 
   constructor(
     private http: HttpClient,
@@ -32,6 +32,10 @@ export class WorkLogService {
         catchError(this.handleError('getWorkLogs', []))
       );
   }
+  /*
+  this.http.get('http://my.api/data')
+      .subscribe(response => console.log(response));
+  */
 
   /**
    * Handle Http operation that failed.

@@ -8,8 +8,8 @@
   </thead>
   <tbody>
     <tr *ngFor="let workLog of workLogs;let index = index;">
-      <td>{{index}}</td>
-      <td>{{workLog.WorkDate}}</td>
+      <td>{{index + 1}}</td>
+      <td>{{workLog.WorkDate | date:'yyyy-MM-dd'}}</td>
       <td>{{workLog.WorkHoures}}</td>
       <td>{{workLog.WorkContent}}</td>
       <td>{{workLog.Remark}}</td>

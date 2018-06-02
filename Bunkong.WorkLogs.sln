@@ -9,13 +9,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.DAL", "Bun
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.Common", "Bunkong.WorkLogs.Common\Bunkong.WorkLogs.Common.csproj", "{1F29C289-C713-4EB2-A52B-36779DB64678}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.Independences", "Bunkong.WorkLogs.Independences\Bunkong.WorkLogs.Independences.csproj", "{3D0D00EE-EAAD-4315-9D7C-D3BBD545862A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bunkong.WorkLogs.Database", "Bunkong.WorkLogs.Database", "{9AE393D4-3AED-41F2-9CFA-A0635C2B006A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bunkong.WorkLogs.Midwares", "Bunkong.WorkLogs.Midwares", "{971EAD55-FE68-424C-B3A5-10C410ADDB98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.Database.Schema", "Bunkong.WorkLogs.Database.Schema\Bunkong.WorkLogs.Database.Schema.csproj", "{821C1616-2236-493E-97EF-BEFE07464B78}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.APIs.Midware", "Bunkong.WorkLogs.APIs.Midware\Bunkong.WorkLogs.APIs.Midware.csproj", "{564C1651-1934-45CC-A4D7-38F9B3EECF98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.Database.MySql", "Bunkong.WorkLogs.Database.MySql\Bunkong.WorkLogs.Database.MySql.csproj", "{02515614-65EE-4F0A-8E71-B269A621D6B4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.DALs.Logs", "Bunkong.WorkLogs.DALs.Logs\Bunkong.WorkLogs.DALs.Logs.csproj", "{47FEDCD9-0BC8-472E-8D74-C14B022AAFB8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bunkong.WorkLogs.Database.MSSQL", "Bunkong.WorkLogs.Database.MSSQL\Bunkong.WorkLogs.Database.MSSQL.csproj", "{DF94CA1B-83DC-4E3F-B72A-13A102850433}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bunkong.WorkLogs.API.Cluster", "Bunkong.WorkLogs.API.Cluster", "{381B4D96-B649-4B85-B7BD-C659128F1260}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bunkong.WorkLogs.API.MSSQL", "Bunkong.WorkLogs.API.MSSQL\Bunkong.WorkLogs.API.MSSQL.csproj", "{56482517-9023-4BEB-9A16-8B06A2349876}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bunkong.WorkLogs.API.MYSQL", "Bunkong.WorkLogs.API.MYSQL\Bunkong.WorkLogs.API.MYSQL.csproj", "{922CDA1F-B78B-4CB2-915F-EB87B52275C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bunkong.WorkLogs.API.Dispatcher", "Bunkong.WorkLogs.API.Dispatcher\Bunkong.WorkLogs.API.Dispatcher.csproj", "{9675718C-6C36-4B9B-AB09-0A7ED77A0EAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,24 +43,41 @@ Global
 		{1F29C289-C713-4EB2-A52B-36779DB64678}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F29C289-C713-4EB2-A52B-36779DB64678}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F29C289-C713-4EB2-A52B-36779DB64678}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D0D00EE-EAAD-4315-9D7C-D3BBD545862A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D0D00EE-EAAD-4315-9D7C-D3BBD545862A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D0D00EE-EAAD-4315-9D7C-D3BBD545862A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D0D00EE-EAAD-4315-9D7C-D3BBD545862A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{564C1651-1934-45CC-A4D7-38F9B3EECF98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{564C1651-1934-45CC-A4D7-38F9B3EECF98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{564C1651-1934-45CC-A4D7-38F9B3EECF98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{564C1651-1934-45CC-A4D7-38F9B3EECF98}.Release|Any CPU.Build.0 = Release|Any CPU
-		{47FEDCD9-0BC8-472E-8D74-C14B022AAFB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{47FEDCD9-0BC8-472E-8D74-C14B022AAFB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{47FEDCD9-0BC8-472E-8D74-C14B022AAFB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{47FEDCD9-0BC8-472E-8D74-C14B022AAFB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{821C1616-2236-493E-97EF-BEFE07464B78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{821C1616-2236-493E-97EF-BEFE07464B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{821C1616-2236-493E-97EF-BEFE07464B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{821C1616-2236-493E-97EF-BEFE07464B78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02515614-65EE-4F0A-8E71-B269A621D6B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02515614-65EE-4F0A-8E71-B269A621D6B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02515614-65EE-4F0A-8E71-B269A621D6B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02515614-65EE-4F0A-8E71-B269A621D6B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF94CA1B-83DC-4E3F-B72A-13A102850433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF94CA1B-83DC-4E3F-B72A-13A102850433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF94CA1B-83DC-4E3F-B72A-13A102850433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF94CA1B-83DC-4E3F-B72A-13A102850433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56482517-9023-4BEB-9A16-8B06A2349876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56482517-9023-4BEB-9A16-8B06A2349876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56482517-9023-4BEB-9A16-8B06A2349876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56482517-9023-4BEB-9A16-8B06A2349876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922CDA1F-B78B-4CB2-915F-EB87B52275C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922CDA1F-B78B-4CB2-915F-EB87B52275C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922CDA1F-B78B-4CB2-915F-EB87B52275C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922CDA1F-B78B-4CB2-915F-EB87B52275C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9675718C-6C36-4B9B-AB09-0A7ED77A0EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9675718C-6C36-4B9B-AB09-0A7ED77A0EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9675718C-6C36-4B9B-AB09-0A7ED77A0EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9675718C-6C36-4B9B-AB09-0A7ED77A0EAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{564C1651-1934-45CC-A4D7-38F9B3EECF98} = {971EAD55-FE68-424C-B3A5-10C410ADDB98}
+		{821C1616-2236-493E-97EF-BEFE07464B78} = {9AE393D4-3AED-41F2-9CFA-A0635C2B006A}
+		{02515614-65EE-4F0A-8E71-B269A621D6B4} = {9AE393D4-3AED-41F2-9CFA-A0635C2B006A}
+		{DF94CA1B-83DC-4E3F-B72A-13A102850433} = {9AE393D4-3AED-41F2-9CFA-A0635C2B006A}
+		{56482517-9023-4BEB-9A16-8B06A2349876} = {381B4D96-B649-4B85-B7BD-C659128F1260}
+		{922CDA1F-B78B-4CB2-915F-EB87B52275C4} = {381B4D96-B649-4B85-B7BD-C659128F1260}
+		{9675718C-6C36-4B9B-AB09-0A7ED77A0EAC} = {381B4D96-B649-4B85-B7BD-C659128F1260}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {88C917B2-BC3F-4F62-B539-49AE89FF5DE9}
