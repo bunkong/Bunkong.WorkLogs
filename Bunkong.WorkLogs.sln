@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2011
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.APIs", "Bunkong.WorkLogs.APIs\Bunkong.WorkLogs.APIs.csproj", "{54EF6309-B1F4-4D98-BD70-EF5A9D2D990C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.DAL", "Bunkong.WorkLogs.DAL\Bunkong.WorkLogs.DAL.csproj", "{C6DDE3D0-FBA5-4D6F-8EA0-9B71CD4ABB5F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.Common", "Bunkong.WorkLogs.Common\Bunkong.WorkLogs.Common.csproj", "{1F29C289-C713-4EB2-A52B-36779DB64678}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bunkong.WorkLogs.Database", "Bunkong.WorkLogs.Database", "{9AE393D4-3AED-41F2-9CFA-A0635C2B006A}"
@@ -31,14 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{54EF6309-B1F4-4D98-BD70-EF5A9D2D990C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54EF6309-B1F4-4D98-BD70-EF5A9D2D990C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54EF6309-B1F4-4D98-BD70-EF5A9D2D990C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54EF6309-B1F4-4D98-BD70-EF5A9D2D990C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C6DDE3D0-FBA5-4D6F-8EA0-9B71CD4ABB5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C6DDE3D0-FBA5-4D6F-8EA0-9B71CD4ABB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C6DDE3D0-FBA5-4D6F-8EA0-9B71CD4ABB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C6DDE3D0-FBA5-4D6F-8EA0-9B71CD4ABB5F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1F29C289-C713-4EB2-A52B-36779DB64678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1F29C289-C713-4EB2-A52B-36779DB64678}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F29C289-C713-4EB2-A52B-36779DB64678}.Release|Any CPU.ActiveCfg = Release|Any CPU

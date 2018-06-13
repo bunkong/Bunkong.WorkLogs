@@ -74,7 +74,7 @@ namespace Bunkong.WorkLogs.API.MYSQL
                 //builder.WithOrigins("http://localhost:8080");
             });
 
-            app.UseMvc();
+            app.UseMvc(); 
         }
     }
 }
