@@ -42,6 +42,11 @@ namespace Bunkong.WorkLogs.API.MSSQL
 
             services.AddDbContext<Bunkong.WorkLogs.Database.MSSQL.IDMSSQLDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("MSSQL")));
+
+            services.Configure<IISOptions>(options =>
+            {
+                options.ForwardClientCertificate = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
