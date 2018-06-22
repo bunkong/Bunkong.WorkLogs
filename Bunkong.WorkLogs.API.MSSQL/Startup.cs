@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Bunkong.WorkLogs.Database.Infrastructure;
+using Bunkong.WorkLogs.Database.MSSQL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -46,6 +48,12 @@ namespace Bunkong.WorkLogs.API.MSSQL
             services.Configure<IISOptions>(options =>
             {
                 options.ForwardClientCertificate = false;
+            });
+
+            services.AddSingleton<IDbConnectionFactory, SqlConnectionFactory>(serviceProvider =>
+            {
+                var connectionString = Configuration["ConnectionStrings:MSSQL"];
+                return new SqlConnectionFactory(connectionString);
             });
         }
 

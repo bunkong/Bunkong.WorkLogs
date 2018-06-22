@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Bunkong.WorkLogs.Database.MSSQL;
 using Bunkong.WorkLogs.Database.Schema;
+using System.Data.SqlClient;
+using System.Data;
+using Dapper;
+using Bunkong.WorkLogs.Database.Infrastructure;
 
 namespace Bunkong.WorkLogs.API.MSSQL.Controllers
 {
@@ -15,10 +19,12 @@ namespace Bunkong.WorkLogs.API.MSSQL.Controllers
     public class WorkLogsController : Controller
     {
         private readonly IDMSSQLDbContext db;
+        private readonly IDbConnectionFactory dbConnectionFactory;
 
-        public WorkLogsController(IDMSSQLDbContext db)
+        public WorkLogsController(IDMSSQLDbContext db, IDbConnectionFactory dbConnectionFactory)
         {
             this.db = db;
+            this.dbConnectionFactory = dbConnectionFactory;
         }
 
         //// GET: api/WorkLogs
@@ -32,8 +38,35 @@ namespace Bunkong.WorkLogs.API.MSSQL.Controllers
         [HttpGet]
         public async Task<IActionResult> GetWorkLogs()
         {
-            var logs = await db.WorkLogs.OrderBy(o => o.WorkDate).ToListAsync();
+            var logs = await db.WorkLogs.OrderBy(o => o.WorkDate).Take(10).ToListAsync();
             return Ok(logs);
+        }
+
+        // GET: api/WorkLogs
+        [HttpGet]
+        [Route("all")]
+        public async Task<IActionResult> GetWorkLogsAll()
+        {
+            //using (IDbConnection dbConnection = new SqlConnection("Server=(localdb)\\mssqllocaldb;Database=Bunkong.WorkLogs;Trusted_Connection=True;ConnectRetryCount=0"))
+            //{
+            //    dbConnection.Open();
+            //    var logs = await dbConnection.QueryAsync<WorkLog>(@"Select top 10 * 
+            //                                  From WorkLogs
+            //                                  Where 1=1
+            //                                  Order by workDate desc");
+            //    return Ok(logs);
+            //}
+
+            using (var dbConnection = dbConnectionFactory.CreateConnection())
+            {
+                var logs = await dbConnection.QueryAsync<WorkLog>(@"Select top 10 * 
+                                              From WorkLogs
+                                              Where 1=1
+                                              Order by workDate desc");
+                return Ok(logs);
+            }
+
+
         }
 
         // GET: api/WorkLogs/5

@@ -11,15 +11,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.Database.S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.Database.MySql", "Bunkong.WorkLogs.Database.MySql\Bunkong.WorkLogs.Database.MySql.csproj", "{02515614-65EE-4F0A-8E71-B269A621D6B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bunkong.WorkLogs.Database.MSSQL", "Bunkong.WorkLogs.Database.MSSQL\Bunkong.WorkLogs.Database.MSSQL.csproj", "{DF94CA1B-83DC-4E3F-B72A-13A102850433}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.Database.MSSQL", "Bunkong.WorkLogs.Database.MSSQL\Bunkong.WorkLogs.Database.MSSQL.csproj", "{DF94CA1B-83DC-4E3F-B72A-13A102850433}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bunkong.WorkLogs.API.Cluster", "Bunkong.WorkLogs.API.Cluster", "{381B4D96-B649-4B85-B7BD-C659128F1260}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bunkong.WorkLogs.API.MSSQL", "Bunkong.WorkLogs.API.MSSQL\Bunkong.WorkLogs.API.MSSQL.csproj", "{56482517-9023-4BEB-9A16-8B06A2349876}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.API.MSSQL", "Bunkong.WorkLogs.API.MSSQL\Bunkong.WorkLogs.API.MSSQL.csproj", "{56482517-9023-4BEB-9A16-8B06A2349876}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bunkong.WorkLogs.API.MYSQL", "Bunkong.WorkLogs.API.MYSQL\Bunkong.WorkLogs.API.MYSQL.csproj", "{922CDA1F-B78B-4CB2-915F-EB87B52275C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.API.MYSQL", "Bunkong.WorkLogs.API.MYSQL\Bunkong.WorkLogs.API.MYSQL.csproj", "{922CDA1F-B78B-4CB2-915F-EB87B52275C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bunkong.WorkLogs.API.Dispatcher", "Bunkong.WorkLogs.API.Dispatcher\Bunkong.WorkLogs.API.Dispatcher.csproj", "{9675718C-6C36-4B9B-AB09-0A7ED77A0EAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bunkong.WorkLogs.API.Dispatcher", "Bunkong.WorkLogs.API.Dispatcher\Bunkong.WorkLogs.API.Dispatcher.csproj", "{9675718C-6C36-4B9B-AB09-0A7ED77A0EAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bunkong.WorkLogs.Database.Infrastructure", "Bunkong.WorkLogs.Database.Infrastructure\Bunkong.WorkLogs.Database.Infrastructure.csproj", "{75853A2B-0E4C-4CE5-AA4A-78AD65ED689E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{9675718C-6C36-4B9B-AB09-0A7ED77A0EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9675718C-6C36-4B9B-AB09-0A7ED77A0EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9675718C-6C36-4B9B-AB09-0A7ED77A0EAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75853A2B-0E4C-4CE5-AA4A-78AD65ED689E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75853A2B-0E4C-4CE5-AA4A-78AD65ED689E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75853A2B-0E4C-4CE5-AA4A-78AD65ED689E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75853A2B-0E4C-4CE5-AA4A-78AD65ED689E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{56482517-9023-4BEB-9A16-8B06A2349876} = {381B4D96-B649-4B85-B7BD-C659128F1260}
 		{922CDA1F-B78B-4CB2-915F-EB87B52275C4} = {381B4D96-B649-4B85-B7BD-C659128F1260}
 		{9675718C-6C36-4B9B-AB09-0A7ED77A0EAC} = {381B4D96-B649-4B85-B7BD-C659128F1260}
+		{75853A2B-0E4C-4CE5-AA4A-78AD65ED689E} = {9AE393D4-3AED-41F2-9CFA-A0635C2B006A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {88C917B2-BC3F-4F62-B539-49AE89FF5DE9}

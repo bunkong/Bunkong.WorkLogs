@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Bunkong.WorkLogs.Common\Bunkong.WorkLogs.Common.csproj" />
+    <ProjectReference Include="..\Bunkong.WorkLogs.Database.Infrastructure\Bunkong.WorkLogs.Database.Infrastructure.csproj" />
     <ProjectReference Include="..\Bunkong.WorkLogs.Database.Schema\Bunkong.WorkLogs.Database.Schema.csproj" />
   </ItemGroup>
 

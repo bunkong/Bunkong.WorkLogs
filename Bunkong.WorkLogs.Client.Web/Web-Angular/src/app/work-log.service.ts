@@ -18,7 +18,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class WorkLogService {
-  private workLogUrl = 'http://localhost:51055/api/worklogs';  // URL to web api
+  // URL to web api http://m.bunkong.com/api/worklogs http://localhost:8869/api/worklogs
+  private workLogUrl = 'http://m.bunkong.com/api/worklogs';
 
   constructor(
     private http: HttpClient,
